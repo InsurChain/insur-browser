@@ -1,0 +1,235 @@
+
+@charset "utf-8";
+@r : 50rem;
+html,
+body {
+  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling:touch;
+}
+html,
+body,
+p,
+em,
+i,
+ul,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+li,
+select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border:none;
+  list-style: none;
+  font-style: normal;
+  font-weight: normal
+}
+img {
+  font-size: 0;
+}
+.clearfix {  zoom: 1; }    /*==for IE6/7 Maxthon2==*/
+.clearfix:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;} 
+input,
+button,
+div {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+ul,
+a,
+p,
+span,
+li,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  text-decoration: none;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.hide{
+  display: none;
+}
+.none{
+  display: none ;
+}
+.ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+#errmsg{
+	text-align:center;
+	left:10%;
+	position:fixed;
+	width:80%;
+	height:60/@r;
+	line-height:60/@r;
+	top:50%;
+  display: none;
+  margin-top: -60/@r;
+  font-size: 28/@r;
+  z-index: 200;
+  #msgtext{
+      background:rgba(145,174,252,.8);
+      padding: 15/@r;
+      border-radius:10/@r;
+      display:inline-block;
+      color:#fff;
+  }
+}
+.flex-container(@_) {
+    display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */  
+    display: -moz-box;    /* 老版本语法: Firefox (buggy) */  
+    display: -ms-flexbox;  /* 混合版本语法: IE 10 */  
+    display: -webkit-flex;  /* 新版本语法： Chrome 21+ */  
+    display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */  
+    /*垂直居中*/  
+    /*老版本语法*/  
+    -webkit-box-align: center;  
+    -moz-box-align: center;  
+    /*混合版本语法*/  
+    -ms-flex-align: center;  
+    /*新版本语法*/      
+}
+.flex-container(top) {
+    display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */  
+    display: -moz-box;    /* 老版本语法: Firefox (buggy) */  
+    display: -ms-flexbox;  /* 混合版本语法: IE 10 */  
+    display: -webkit-flex;  /* 新版本语法： Chrome 21+ */  
+    display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */  
+    /*垂直居中*/  
+    /*老版本语法*/  
+    -webkit-box-align: center;  
+    -moz-box-align: center;  
+    /*混合版本语法*/  
+    -ms-flex-align: center;  
+    /*新版本语法*/  
+    -webkit-align-items: top;  
+    align-items: top;     
+    -webkit-justify-content: center;  
+    justify-content: center;
+}
+.flex-container(left){
+    /*水平居中*/  
+    /*老版本语法*/  
+    -webkit-align-items: center;  
+    align-items: center;
+    -webkit-box-pack: start;  
+    -moz-box-pack: start;  
+    /*混合版本语法*/  
+    -ms-flex-pack: start;  
+    /*新版本语法*/  
+    -webkit-justify-content: flex-start;  
+    justify-content: flex-start;  
+}
+.flex-container(center){
+    /*水平居中*/  
+    /*老版本语法*/  
+    -webkit-align-items: center;  
+    align-items: center;
+    -webkit-box-pack: center;  
+    -moz-box-pack: center;  
+    /*混合版本语法*/  
+    -ms-flex-pack: center;  
+    /*新版本语法*/  
+    -webkit-justify-content: center;  
+    justify-content: center;  
+}
+.flex-container(between){
+    /*水平居中*/  
+    /*老版本语法*/  
+    -webkit-align-items: center;  
+    align-items: center;
+    -webkit-box-pack: justify;  
+    -moz-box-pack: justify;  
+    /*混合版本语法*/  
+    -ms-flex-pack: justify;  
+    /*新版本语法*/  
+    -webkit-justify-content: space-between;  
+    justify-content: space-between;  
+}
+.flex-container(around){
+    /*水平居中*/  
+    /*老版本语法*/  
+    -webkit-align-items: center;  
+    align-items: center;
+    -webkit-box-pack: justify;  
+    -moz-box-pack: justify;  
+    /*混合版本语法*/  
+    -ms-flex-pack: justify;  
+    /*新版本语法*/  
+    -webkit-justify-content: space-around;  
+    justify-content: space-around;  
+}
+.emptyImg{
+  width: 133/@r;
+  height: 192/@r;
+  margin:100/@r auto;
+  img{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+  }
+}
+
+// * {
+//   moz-user-select: -moz-none;
+//   -moz-user-select: none;
+//   -o-user-select: none;
+//   -khtml-user-select: none;
+//   -webkit-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   }
+input{  
+    -webkit-user-select:auto; /*webkit浏览器*/     
+}
+textarea{
+    -webkit-user-select:auto; /*webkit浏览器*/
+}
+.foo{
+  -webkit-user-select:auto; /*webkit浏览器*/
+  word-wrap:break-word
+}
+
+.loading{
+  width: 60 /@r;
+  height: 60 /@r;
+  display: block;
+  margin: 20 /@r auto;
+}
+.loaded{
+  color: #bcbcbe;
+  font-size: 30 /@r;
+  text-align: center;
+}
+a{
+  background: none;
+}
+
+.warp1000{
+  width: 1000px;
+  margin:  0 auto;
+}
+.empty p{
+  font-size: 30px;
+  color: #676767;
+  text-align: center;
+  margin-top: 20px;
+}

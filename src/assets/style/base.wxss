@@ -1,0 +1,150 @@
+@charset "utf-8";
+html,
+body {
+  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body,
+p,
+em,
+i,
+ul,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+li,
+select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  list-style: none;
+  font-style: normal;
+  font-weight: normal;
+}
+img {
+  font-size: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+/*==for IE6/7 Maxthon2==*/
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input,
+button,
+div {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+ul,
+a,
+p,
+span,
+li,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  text-decoration: none;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.none {
+  display: none ;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#errmsg {
+  text-align: center;
+  left: 10%;
+  position: fixed;
+  width: 80%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  top: 50%;
+  display: none;
+  margin-top: -1.2rem;
+  font-size: 0.56rem;
+  z-index: 200;
+}
+#errmsg #msgtext {
+  background: rgba(145, 174, 252, 0.8);
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  display: inline-block;
+  color: #fff;
+}
+.emptyImg {
+  width: 2.66rem;
+  height: 3.84rem;
+  margin: 2rem auto;
+}
+.emptyImg img {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+input {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
+}
+textarea {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
+}
+.foo {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
+  word-wrap: break-word;
+}
+.loading {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  margin: 0.4rem auto;
+}
+.loaded {
+  color: #bcbcbe;
+  font-size: 0.6rem;
+  text-align: center;
+}
+a {
+  background: none;
+}
+.warp1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
+.empty p {
+  font-size: 30px;
+  color: #676767;
+  text-align: center;
+  margin-top: 20px;
+}
